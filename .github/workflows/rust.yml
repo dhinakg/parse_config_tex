@@ -39,7 +39,7 @@ jobs:
       with:
         command: build
         args: --release -i python${{ matrix.python-version }}
-      if: ${{ matrix.os == 'macos-latest' }}
+      if: ${{ matrix.os != 'macos-latest' }}
     - uses: PyO3/maturin-action@v1
       with:
         command: build
