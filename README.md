@@ -34,7 +34,8 @@ python -m venv .env
 source .env/bin/activate
 pip install maturin
 cd parse_config_tex
-maturin build --release
+maturin develop --release
+cd ..
 ```
 
 should now have the module in .env/lib/pythonX.X/site-packages/rbits/...  
