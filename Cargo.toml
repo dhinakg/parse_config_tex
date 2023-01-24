@@ -1,0 +1,12 @@
+[package]
+name = "parse"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "rbits"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+pyo3 = "0.18.0"
