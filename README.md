@@ -41,7 +41,7 @@ should now have the module in .env/lib/pythonX.X/site-packages/rbits/...
 
 should by available to any python script while in this virtual environment  
 
-command descriptions:
+command descriptions:  
 `python -m venv .env`     create python virtual environment named .env  
 
 `source .env/bin/activate`    enter virtual environment .env  
