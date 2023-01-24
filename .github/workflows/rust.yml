@@ -38,7 +38,13 @@ jobs:
     - uses: PyO3/maturin-action@v1
       with:
         command: build
-        args: --release -i python${{ matrix.python-version }} ${{ matrix.macos-args }}
+        args: --release -i python${{ matrix.python-version }}
+      if: ${{ matrix.os }} != "macos-latest"
+    - uses: PyO3/maturin-action@v1
+      with:
+        command: build
+        args: --release -i python${{ matrix.python-version }} --target ${{ matrix.macos-args }}
+      if: ${{ matrix.os }} == "macos-latest"
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
