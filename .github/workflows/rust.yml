@@ -15,11 +15,12 @@ jobs:
       matrix:
         python-version: ["3.7", "3.8", "3.9", "3.10", "3.11"]
         os: [ubuntu-latest, macos-latest, windows-latest]
-        include:
-          - os: macos-latest
-            macos-args: --target x86_64-apple-darwin
-          - os: macos-latest
-            macos-args: --target arm64-apple-darwin
+        macos-args: [--target x86_64-apple-darwin, --target aarch64-apple-darwin]
+        exclude:
+          - os: ubuntu-latest
+            macos-args: --target aarch64-apple-darwin
+          - os: windows-latest
+            macos-args: --target aarch64-apple-darwin
           
     steps:
     - uses: actions/checkout@v3
