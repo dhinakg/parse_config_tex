@@ -350,7 +350,7 @@ fn special_char(key: &str) -> char {
 }
 
 #[pymodule]
-fn rbits(_py: Python, m: &PyModule) -> PyResult<()> {
+fn texparse(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(parse_config_tex, m)?)?;
     Ok(())
 }
