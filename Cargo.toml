@@ -9,7 +9,6 @@ name = "rbits"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-pyo3 = "0.18.0"
 
 [dependencies.pyo3]
 version = "0.18.0"
