@@ -12,11 +12,13 @@ rust module callable by python that returns a formatted description from Configu
 
 - width: width of output, used for descriptions that contain a table for proper formatting  
 
-- show_choices: True - return only the valid values from the description  
-                False - return whole description  
+- show_valid_only:  
+    True - return only the valid values from the description  
+    False - return whole description  
 
-- show_url: True - include the url of links in the description if any exist  
-            False - no urls included (looks better in my opinion)  
+- show_url:  
+    True - include the url of links in the description if any exist  
+    False - no urls included (looks better in my opinion)  
 
 
 ## installation ##  
@@ -51,5 +53,4 @@ command descriptions:
 `pip install maturin`    used to compile rust code into python callable code  
 
 `cd parse_config_tex`  
-
-`maturin build --release`    build rbits module inside the .env (this assumes you have rust installed)  
+`maturin develop --release`    build rbits module inside the .env (this assumes you have rust installed)  
