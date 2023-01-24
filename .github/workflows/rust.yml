@@ -39,12 +39,12 @@ jobs:
       with:
         command: build
         args: --release -i python${{ matrix.python-version }}
-      if: matrix.os != "macos-latest"
+      if: ${{ matrix.os == 'macos-latest' }}
     - uses: PyO3/maturin-action@v1
       with:
         command: build
         args: --release -i python${{ matrix.python-version }} ${{ matrix.macos-args }}
-      if: matrix.os == "macos-latest"
+      if: ${{ matrix.os == 'macos-latest' }}
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
